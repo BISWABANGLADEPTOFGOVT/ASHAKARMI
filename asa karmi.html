@@ -1,0 +1,332 @@
+<script src="https://cdn02.jotfor.ms/static/prototype.forms.js?3.3.41745" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/static/jotform.forms.js?3.3.41745" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.41745" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.41745" type="text/javascript"></script>
+<script defer src="https://cdn03.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.41745" type="text/javascript"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+<script src="https://cdn01.jotfor.ms/js/payments/validategateways.js?v=3.3.41745" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = false;
+	JotForm.extendsNewTheme = true;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.newPaymentUI = true;
+	JotForm.submitError="jumpToFirstError";
+
+	JotForm.init(function(){
+	/*INIT-START*/
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("20", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":false,"past":true,"custom":["1970-01-01"],"ranges":["2005-12-31>1970-01-01"],"start":"1970-01-01","end":"2005-12-31","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("20", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":false,"past":true,"custom":["1970-01-01"],"ranges":["2005-12-31>1970-01-01"],"start":"1970-01-01","end":"2005-12-31","countSelectedDaysOnly":false}); });
+      JotForm.description('input_20', 'Age limit 18 years to 45 years');
+      setTimeout(function() {
+          $('input_8').hint('ex: example@gmail.com');
+       }, 20);
+      JotForm.setPhoneMaskingValidator( 'input_7_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+          JotForm.isNewSaveAndContinueLaterActive = true;
+	/*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"clickTo","qid":"1","text":"Application Form","type":"control_head"},null,{"description":"","name":"fullName3","qid":"3","text":"Full Name (BLOCK LETTER)","type":"control_fullname"},null,{"description":"","name":"gender","qid":"5","subLabel":"","text":"Gender","type":"control_dropdown"},{"description":"","name":"address6","qid":"6","text":"Address ","type":"control_address"},{"description":"","name":"phoneNumber7","qid":"7","text":"Contact Number","type":"control_phone"},{"description":"","name":"email8","qid":"8","subLabel":"example@example.com","text":"E-mail","type":"control_email"},null,null,null,null,null,null,null,null,null,null,null,{"description":"Age limit 18 years to 45 years","name":"dateOf","qid":"20","text":"Date of Birth","type":"control_datetime"},null,null,{"description":"","name":"fathersName","qid":"23","text":"Father's Name (BLOCK LETTER)","type":"control_fullname"},{"description":"","name":"selectCategory","qid":"24","subLabel":"","text":"Select Category","type":"control_dropdown"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"applicationFees","qid":"47","text":"Application Fees","type":"control_head"},null,null,null,null,{"description":"","name":"qualification","qid":"52","subLabel":"","text":"Qualification","type":"control_dropdown"},null,{"description":"","name":"selectExam","qid":"54","subLabel":"","text":"Select exam center","type":"control_dropdown"},{"name":"applicationCharge55","qid":"55","text":"","type":"control_head"},null,{"description":"","name":"maritalStatus","qid":"57","subLabel":"","text":"Marital Status","type":"control_dropdown"},{"description":"","name":"applyingFor","qid":"58","subLabel":"","text":"Applying For","type":"control_dropdown"},null,null,null,null,{"name":"input63","qid":"63","text":"APPLY NOW","type":"control_text"},null,null,null,null,null,{"description":"","name":"address","qid":"69","text":"","type":"control_address"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"clickTo","qid":"1","text":"Application Form","type":"control_head"},null,{"description":"","name":"fullName3","qid":"3","text":"Full Name (BLOCK LETTER)","type":"control_fullname"},null,{"description":"","name":"gender","qid":"5","subLabel":"","text":"Gender","type":"control_dropdown"},{"description":"","name":"address6","qid":"6","text":"Address ","type":"control_address"},{"description":"","name":"phoneNumber7","qid":"7","text":"Contact Number","type":"control_phone"},{"description":"","name":"email8","qid":"8","subLabel":"example@example.com","text":"E-mail","type":"control_email"},null,null,null,null,null,null,null,null,null,null,null,{"description":"Age limit 18 years to 45 years","name":"dateOf","qid":"20","text":"Date of Birth","type":"control_datetime"},null,null,{"description":"","name":"fathersName","qid":"23","text":"Father's Name (BLOCK LETTER)","type":"control_fullname"},{"description":"","name":"selectCategory","qid":"24","subLabel":"","text":"Select Category","type":"control_dropdown"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"applicationFees","qid":"47","text":"Application Fees","type":"control_head"},null,null,null,null,{"description":"","name":"qualification","qid":"52","subLabel":"","text":"Qualification","type":"control_dropdown"},null,{"description":"","name":"selectExam","qid":"54","subLabel":"","text":"Select exam center","type":"control_dropdown"},{"name":"applicationCharge55","qid":"55","text":"","type":"control_head"},null,{"description":"","name":"maritalStatus","qid":"57","subLabel":"","text":"Marital Status","type":"control_dropdown"},{"description":"","name":"applyingFor","qid":"58","subLabel":"","text":"Applying For","type":"control_dropdown"},null,null,null,null,{"name":"input63","qid":"63","text":"APPLY NOW","type":"control_text"},null,null,null,null,null,{"description":"","name":"address","qid":"69","text":"","type":"control_address"}]);}, 20); 
+</script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link id="custom-font" type="text/css" rel="stylesheet" href="//cdn.jotfor.ms/fonts/?family=Inter" />
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/defaultV2.css?v=5fa5db2
+"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/548b1325700cc48d318b4567.css?v=3.3.41745&themeRevisionID=6410387c373563082d0aa10a"/>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_styles.css?3.3.41745" />
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_feature.css?3.3.41745" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #fff;
+    }
+  
+    .form-all {
+      color: rgb(46, 109, 164);
+    }
+    .form-header-group .form-header {
+      color: rgb(46, 109, 164);
+    }
+    .form-header-group .form-subHeader {
+      color: rgb(46, 109, 164);
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: rgb(46, 109, 164);
+    }
+    .form-sub-label {
+      color: 1a1a1a;
+    }
+  
+  .supernova {
+    background-color: #ecedf3;
+  }
+  .supernova body {
+    background: transparent;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #fff;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  
+    .form-all {
+      position: relative;
+    }
+    .form-all:before {
+      content: "";
+      background-image: url("https://www.jotform.com/uploads/hubg6860/form_files/1.645d1be2eae2a8.40936381.jpg");
+      display: inline-block;
+      height: 220px;
+      position: absolute;
+      background-size: 220px 220px;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .form-all {
+      margin-top: 240px;
+    }
+    .form-all:before {
+      top: -230px;
+      background-position: top center;
+      left: 0;
+    }
+          /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+.form-label.form-label-auto {
+        
+      display: block;
+      float: none;
+      text-align: left;
+      width: 100%;
+    
+      }
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" action="https://submit.jotform.com/submit/231304751421444" method="post" name="form_231304751421444" id="231304751421444" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231304751421444" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httal htvam">
+            <h1 id="header_1" class="form-header" data-component="header">Application Form For Asha Karmi Dept Of Health Government Of West Bengal</h1>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_3"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_3" for="first_3"> Full Name (BLOCK LETTER) </label>
+        <div id="cid_3" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_fullName3[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_3" name="q3_fullName3[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_3 sublabel_3_middle" /><label class="form-sub-label" for="middle_3" id="sublabel_3_middle" style="min-height:13px" aria-hidden="false">Middle Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_fullName3[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_23"><label class="form-label form-label-top form-label-extended form-label-auto" id="label_23" for="first_23"> Father's Name (BLOCK LETTER) </label>
+        <div id="cid_23" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_23" name="q23_fathersName[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_23 given-name" size="10" value="" data-component="first" aria-labelledby="label_23 sublabel_23_first" /><label class="form-sub-label" for="first_23" id="sublabel_23_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_23" name="q23_fathersName[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_23 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_23 sublabel_23_middle" /><label class="form-sub-label" for="middle_23" id="sublabel_23_middle" style="min-height:13px" aria-hidden="false">Middle Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_23" name="q23_fathersName[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_23 family-name" size="15" value="" data-component="last" aria-labelledby="label_23 sublabel_23_last" /><label class="form-sub-label" for="last_23" id="sublabel_23_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_datetime" id="id_20"><label class="form-label form-label-top form-label-auto" id="label_20" for="day_20"> Date of Birth </label>
+        <div id="cid_20" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true" class="extended notLiteMode"><span class="form-sub-label-container day" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_20" name="q20_dateOf[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="31" autoComplete="off" aria-labelledby="label_20 sublabel_20_day" /><span class="date-separate" aria-hidden="true"> /</span><label class="form-sub-label" for="day_20" id="sublabel_20_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container month" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_20" name="q20_dateOf[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="12" autoComplete="off" aria-labelledby="label_20 sublabel_20_month" /><span class="date-separate" aria-hidden="true"> /</span><label class="form-sub-label" for="month_20" id="sublabel_20_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container year" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_20" name="q20_dateOf[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2005" autoComplete="off" aria-labelledby="label_20 sublabel_20_year" /><label class="form-sub-label" for="year_20" id="sublabel_20_year" style="min-height:13px" aria-hidden="false">Year</label></span><span class="form-sub-label-container" style="vertical-align:top"><img class="showAutoCalendar newDefaultTheme-dateIcon icon-seperatedMode" alt="Pick a Date" id="input_20_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="input_20_pick" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="true">Date Picker Icon</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_6" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6_addr_line1"> Address </label>
+        <div id="cid_6" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_addr_line1" name="q6_address6[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_6 address-line1" value="" data-component="address_line_1" aria-labelledby="label_6 sublabel_6_addr_line1" required="" /><label class="form-sub-label" for="input_6_addr_line1" id="sublabel_6_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_addr_line2" name="q6_address6[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_6 off" value="" data-component="address_line_2" aria-labelledby="label_6 sublabel_6_addr_line2" /><label class="form-sub-label" for="input_6_addr_line2" id="sublabel_6_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_city" name="q6_address6[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_6 address-level2" value="" data-component="city" aria-labelledby="label_6 sublabel_6_city" required="" /><label class="form-sub-label" for="input_6_city" id="sublabel_6_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_state" name="q6_address6[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_6 address-level1" value="" data-component="state" aria-labelledby="label_6 sublabel_6_state" /><label class="form-sub-label" for="input_6_state" id="sublabel_6_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_postal" name="q6_address6[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_6 postal-code" value="" data-component="zip" aria-labelledby="label_6 sublabel_6_postal" required="" /><label class="form-sub-label" for="input_6_postal" id="sublabel_6_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_69" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_69" for="input_69_addr_line1"> </label>
+        <div id="cid_69" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_69_addr_line2" name="q69_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_69 address-line2" value="" data-component="address_line_2" aria-labelledby="label_69 sublabel_69_addr_line2" /><label class="form-sub-label" for="input_69_addr_line2" id="sublabel_69_addr_line2" style="min-height:13px" aria-hidden="false">Gram Panchayat</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-city-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_69_city" name="q69_address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_69 address-level2" value="" data-component="city" aria-labelledby="label_69 sublabel_69_city" /><label class="form-sub-label" for="input_69_city" id="sublabel_69_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_69_state" name="q69_address[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_69 address-level1" value="" data-component="state" aria-labelledby="label_69 sublabel_69_state" /><label class="form-sub-label" for="input_69_state" id="sublabel_69_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField" style="display:none"><span class="form-address-line form-address-zip-line jsTest-address-lineField form-address-hiddenLine" style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_69_postal" name="q69_address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_69 postal-code" value="" data-component="zip" aria-labelledby="label_69 sublabel_69_postal" /><label class="form-sub-label" for="input_69_postal" id="sublabel_69_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_8"><label class="form-label form-label-top form-label-auto" id="label_8" for="input_8"> E-mail </label>
+        <div id="cid_8" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_8" name="q8_email8" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="example@gmail.com" data-component="email" aria-labelledby="label_8 sublabel_input_8" /><label class="form-sub-label" for="input_8" id="sublabel_input_8" style="min-height:13px" aria-hidden="false">example@gmail.com</label></span> </div>
+      </li>
+      <li class="form-line form-line-column form-col-2" data-type="control_phone" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_10_full"> Contact Number </label>
+        <div id="cid_7" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_10_full" name="q10_phoneNumber10[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_10 tel-national" style="width:310px" data-masked="true" value="" placeholder="(+91 0000000000)" data-component="phone" aria-labelledby="label_10" /></span> </div>
+      </li>
+      <li class="form-line form-line-column form-col-3" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5"> Gender </label>
+        <div id="cid_5" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_5" name="q5_gender" style="width:310px" data-component="dropdown" aria-label="Gender">
+            <option value="">Please Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select> </div>
+      </li>
+      <li class="form-line form-line-column form-col-4" data-type="control_dropdown" id="id_24"><label class="form-label form-label-top form-label-auto" id="label_24" for="input_24"> Select Category </label>
+        <div id="cid_24" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_24" name="q24_selectCategory" style="width:310px" data-component="dropdown" aria-label="Select Category">
+            <option value="">Please Select</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="OBC A">OBC A</option>
+            <option value="OBC B">OBC B</option>
+            <option value="UR">UR</option>
+            <option value="EWS">EWS</option>
+            <option value="PH">PH</option>
+          </select> </div>
+      </li>
+      <li class="form-line form-line-column form-col-5" data-type="control_dropdown" id="id_57"><label class="form-label form-label-top form-label-auto" id="label_57" for="input_57"> Marital Status </label>
+        <div id="cid_57" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_57" name="q57_maritalStatus" style="width:310px" data-component="dropdown" aria-label="Marital Status">
+            <option value="">Please Select</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Widow">Widow</option>
+            <option value="Divorced">Divorced</option>
+            
+          </select> </div>
+      </li>
+      <li class="form-line form-line-column form-col-6" data-type="control_dropdown" id="id_54"><label class="form-label form-label-top form-label-auto" id="label_54" for="input_54"> District (Select Exam Center) </label>
+        <div id="cid_54" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_54" name="q54_selectExam" style="width:310px" data-component="dropdown" aria-label="District (Select Exam Center)">
+            <option value="">Please Select</option>
+            <option value="Alipurduar">Alipurduar</option>
+            <option value="Bankura">Bankura</option>
+            <option value="Birbhum">Birbhum</option>
+            <option value="Cooch Behar">Cooch Behar</option>
+            <option value="Dakshin Dinajpur">Dakshin Dinajpur</option>
+            <option value="Darjeeling">Darjeeling</option>
+            <option value="Hooghly">Hooghly</option>
+            <option value="Howrah">Howrah</option>
+            <option value="Jalpaiguri">Jalpaiguri</option>
+            <option value="Jhargram">Jhargram</option>
+            <option value="Kalimpong">Kalimpong</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Malda">Malda</option>
+            <option value="Murshidabad">Murshidabad</option>
+            <option value="Nadia">Nadia</option>
+            <option value="North 24 Parganas">North 24 Parganas</option>
+            <option value="Paschim Bardhaman">Paschim Bardhaman</option>
+            <option value="Paschim Medinipur">Paschim Medinipur</option>
+            <option value="Purba Bardhaman">Purba Bardhaman</option>
+            <option value="Purba Medinipur">Purba Medinipur</option>
+            <option value="Purulia">Purulia</option>
+            <option value="South 24 Parganas">South 24 Parganas</option>
+            <option value="Uttar Dinajpur">Uttar Dinajpur</option>
+          </select> </div>
+      </li>
+      <li class="form-line form-line-column form-col-7" data-type="control_dropdown" id="id_58"><label class="form-label form-label-top form-label-auto" id="label_58" for="input_58"> Applying For </label>
+        <div id="cid_58" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_58" name="q58_applyingFor" style="width:310px" data-component="dropdown" aria-label="Applying For">
+            <option value="">Please Select</option>
+            <option value="Asha Karmi">Asha Karmi</option>
+        
+          </select> </div>
+      </li>
+      <li class="form-line form-line-column form-col-8" data-type="control_dropdown" id="id_52"><label class="form-label form-label-top form-label-auto" id="label_52" for="input_52"> Qualification </label>
+        <div id="cid_52" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_52" name="q52_qualification" style="width:310px" data-component="dropdown" aria-label="Qualification">
+            <option value="">Please Select</option>
+            <option value="8TH PASS">8TH PASS</option>
+            <option value="10TH PASS">10TH PASS</option>
+            <option value="Higher Secondary">Higher Secondary</option>
+            <option value="Graduate">Graduate</option>
+            
+          </select> </div>
+      </li>
+      <li id="cid_47" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_47" class="form-header" data-component="header">Application Fees</h2>
+            <div id="subHeader_47" class="form-subHeader">TWO HUNDRED EIGHTY RUPEES ONLY (280/-) </div>
+          </div>
+        </div>
+      </li>
+      <li id="cid_55" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvam">
+            <h2 id="header_55" class="form-header" data-component="header"></h2>
+            <div id="subHeader_55" class="form-subHeader">*Before Submit The Application Form Must be Check The Preview And All Column Carefully.</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-9" data-type="control_text" id="id_63">
+        <div id="cid_63" class="form-input-wide" data-layout="full">
+          <div id="text_63" class="form-html" data-component="text" tabindex="0">
+            <p><span style="font-size: 24pt;"><strong><a href="PAYMENT GATEWAY LINK??" target="_blank" rel="nofollow">SUBMIT NOW</a></strong></span></p>
+          </div>
+        </div>
+      </li>
+      <li style="clear:both"></li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  
